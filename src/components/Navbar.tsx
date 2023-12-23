@@ -2,7 +2,7 @@ export default function Navbar() {
   return (
     <nav className="fixed font-dm z-30 w-full py-10 md:px-20 bg-white text-black flex justify-center md:justify-end items-center border-b">
       <div className="px-4 w-full flex items-center justify-between gap-4 text-xs md:text-md">
-        <div className="hidden md:flex gap-5">
+        <div className="flex gap-5">
           <a className="smooth-transition hover:underline" href="#home">
             HOME
           </a>
@@ -12,9 +12,6 @@ export default function Navbar() {
           <a className="smooth-transition hover:underline" href="#rooms">
             ROOMS
           </a>
-        </div>
-        <div className="text-4xl block md:hidden">
-          MENU
         </div>
         <a
           href="#book"
