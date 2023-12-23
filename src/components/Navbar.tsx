@@ -14,7 +14,7 @@ export default function Navbar() {
           </a>
         </div>
         <div className="text-4xl block md:hidden">
-          <ion-icon name="menu-outline"></ion-icon>
+          MENU
         </div>
         <a
           href="#book"
