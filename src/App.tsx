@@ -4,6 +4,7 @@ import Main from "./components/Main";
 import About from "./components/About";
 import Rooms from "./components/Rooms";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 function App() {
   useEffect(() => {
@@ -14,11 +15,9 @@ function App() {
 
     const inter1 = document.querySelector(".inter1") as HTMLImageElement;
     const inter2 = document.querySelector(".inter2") as HTMLImageElement;
-    const inter3 = document.querySelector(".inter3") as HTMLImageElement;
 
     const food1 = document.querySelector(".food1") as HTMLImageElement;
     const food2 = document.querySelector(".food2") as HTMLImageElement;
-    const food3 = document.querySelector(".food3") as HTMLImageElement;
 
     const interiorSection = document.querySelector(".interior-section") as HTMLElement;
 
@@ -26,7 +25,7 @@ function App() {
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      headerImg.style.transform = `scale(${1 + scrollPosition * 0.001})`;
+      headerImg.style.transform = `scale(${1 + scrollPosition * 0.0001})`;
 
       imgComfort1.style.transform = `translateY(-${scrollPosition * 0.1}px) scale(${1 + scrollPosition * 0.0002})`;
       imgComfort2.style.transform = `translateY(-${scrollPosition * 0.2}px) scale(${1 + scrollPosition * 0.0003})`;
@@ -36,15 +35,13 @@ function App() {
       const interiorScrollPosition = scrollPosition - interiorRect.top;
 
       inter1.style.transform = `scale(${1 + interiorScrollPosition * 0.00001})`;
-      inter2.style.transform = `translateY(-${interiorScrollPosition * 0.1}px) scale(${1 + interiorScrollPosition * 0.0003})`;
-      inter3.style.transform = `translateY(-${interiorScrollPosition * 0.2}px) scale(${1 + interiorScrollPosition * 0.00002})`;
+      inter2.style.transform = `translateY(-${interiorScrollPosition * 0.1}px) scale(${1 + interiorScrollPosition * 0.0001})`;
 
       const culinaryRect = culinarySection.getBoundingClientRect();
       const culinaryScrollPosition = scrollPosition - culinaryRect.top;
 
       food1.style.transform = `scale(${1 + culinaryScrollPosition * 0.0001})`;
-      food2.style.transform = `translateY(-${culinaryScrollPosition * 0.1}px) scale(${1 + scrollPosition * 0.00004})`;
-      food3.style.transform = `translateY(-${culinaryScrollPosition * 0.2}px) scale(${1 + scrollPosition * 0.00001})`;
+      food2.style.transform = `translateY(-${culinaryScrollPosition * 0.1}px) scale(${1 + scrollPosition * 0.0001})`;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -56,11 +53,7 @@ function App() {
       <Main />
       <About />
       <Rooms />
-      <section id="book" className="w-full h-screen">
-        <h1 className="text-center py-10 text-4xl md:text-9xl font-dm uppercase">
-          BOOK YOUR <u>ESCAPE.</u>
-        </h1>
-      </section>
+      <Contact />
       <Footer />
     </>
   );

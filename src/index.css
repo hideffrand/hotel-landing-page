@@ -8,7 +8,26 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #f8f8f8;
+}
+
 
 .smooth-transition {
   transition: 0.3s;
+}
+
+/* Add this to your CSS file or component */
+@keyframes marqueeAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  display: inline-block;
+  animation: marqueeAnimation 10s linear infinite;
 }
